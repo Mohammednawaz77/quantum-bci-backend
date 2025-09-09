@@ -7,3 +7,4 @@ pennylane
 mne
 reportlab
 websockets
+python-multipart
