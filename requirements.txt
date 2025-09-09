@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+numpy
+scipy
+pennylane
+mne
+reportlab
+websockets
