@@ -20,12 +20,14 @@ app = FastAPI()
 # DEV: allow everything while debugging CORS / uploads
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://hospital-bci-frontend.vercel.app",  # your frontend domain
+        "http://localhost:3000"  # keep for local testing
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_DIR = os.path.join(BASE_DIR, "uploads")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
